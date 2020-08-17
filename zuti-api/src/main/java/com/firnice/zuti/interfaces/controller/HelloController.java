@@ -14,7 +14,7 @@ import java.util.Map;
 public class HelloController {
 
 
-    @GetMapping
+    @GetMapping("/list")
     public List<TestCachePO> test() {
         List<TestCachePO> result = Lists.newArrayList();
         Map<String, List<TestCachePO>> contentLocalMap = TestCache.getContentLocalMap();
