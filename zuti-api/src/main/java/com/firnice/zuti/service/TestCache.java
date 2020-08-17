@@ -30,7 +30,7 @@ public class TestCache {
         log.info("localCache begin");
         try {
             List<TestCachePO> list = Lists.newArrayList();
-            for (int i = 0; i < 20000; i++) {
+            for (int i = 0; i < 100000; i++) {
                 TestCachePO testCachePO = new TestCachePO();
                 testCachePO.setK0(StringUtil.getRandomString(50));
                 testCachePO.setK1(StringUtil.getRandomString(50));

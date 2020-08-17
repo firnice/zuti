@@ -14,7 +14,7 @@ public class CreateCacheTask {
     @Autowired
     private TestCache testCache;
 
-    @Scheduled(cron = "0 0/1 * * * ?")
+    @Scheduled(cron = "0/10 * * * * ?")
     public void scheduledSelection() {
         log.info("=====>>>>>定时任务  {}", System.currentTimeMillis());
         try {
