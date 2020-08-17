@@ -19,6 +19,10 @@ public class TestCache {
     private static final Map<String, List<TestCachePO>> contentLocalMap = new HashMap<>();
 
 
+    public static Map<String, List<TestCachePO>> getContentLocalMap() {
+        return contentLocalMap;
+    }
+
     /**
      * 刷新本地缓存
      *
