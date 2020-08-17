@@ -1,4 +1,4 @@
-package com.firnice.zuti.util;
+package com.firnice.zuti.infrastructure.util;
 
 import java.util.Random;
 

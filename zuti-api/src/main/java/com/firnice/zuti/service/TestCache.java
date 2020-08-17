@@ -1,8 +1,8 @@
 package com.firnice.zuti.service;
 
 
-import com.firnice.zuti.model.TestCachePO;
-import com.firnice.zuti.util.StringUtil;
+import com.firnice.zuti.service.model.TestCachePO;
+import com.firnice.zuti.infrastructure.util.StringUtil;
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 @Component
 @Slf4j

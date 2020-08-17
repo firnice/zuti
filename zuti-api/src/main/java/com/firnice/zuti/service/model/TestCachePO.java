@@ -1,4 +1,4 @@
-package com.firnice.zuti.model;
+package com.firnice.zuti.service.model;
 
 import lombok.Data;
 

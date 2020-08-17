@@ -1,6 +1,6 @@
 package com.firnice.zuti.interfaces.controller;
 
-import com.firnice.zuti.model.TestCachePO;
+import com.firnice.zuti.service.model.TestCachePO;
 import com.firnice.zuti.service.TestCache;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections4.CollectionUtils;
@@ -23,7 +23,6 @@ public class HelloController {
         if(CollectionUtils.isNotEmpty(test)){
             result = test.subList(0, 10);
         }
-
         return result;
     }
 }
