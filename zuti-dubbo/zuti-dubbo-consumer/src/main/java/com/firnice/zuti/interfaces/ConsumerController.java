@@ -3,6 +3,7 @@ package com.firnice.zuti.interfaces;
 import com.firnice.zuti.interfaces.dto.ProviderTestDTO;
 import com.firnice.zuti.interfaces.vo.ResultVO;
 import com.firnice.zuti.service.IProviderService;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +17,8 @@ import java.util.List;
 public class ConsumerController {
 
     // Dubbo远程调用注解
-    @Reference
+//    @Reference
+    @DubboReference
     private IProviderService providerService;
 
 

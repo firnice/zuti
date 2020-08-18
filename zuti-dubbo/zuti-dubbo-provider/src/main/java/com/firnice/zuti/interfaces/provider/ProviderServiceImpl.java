@@ -2,12 +2,13 @@ package com.firnice.zuti.interfaces.provider;
 
 import com.firnice.zuti.interfaces.dto.ProviderTestDTO;
 import com.firnice.zuti.service.IProviderService;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@DubboService
 public class ProviderServiceImpl implements IProviderService {
     @Override
     public List<ProviderTestDTO> queryList() {
