@@ -43,7 +43,7 @@ public class CacheConfig {
      * 每个cache缺省3600秒过期，最大个数1000
      */
     public enum Caches {
-        user(60, 2),
+        user(5, 2),
         info(5),
         role;
 

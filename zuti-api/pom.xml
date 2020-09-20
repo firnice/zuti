@@ -52,7 +52,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${springboot.version}</version>
                 <configuration>
-                    <mainClass>com.firnice.zuti.Application</mainClass>
+                    <mainClass>com.firnice.zuti.ZutiApiApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
