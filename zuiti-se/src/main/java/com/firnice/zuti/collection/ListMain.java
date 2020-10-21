@@ -16,5 +16,10 @@ public class ListMain {
             System.out.println(a[i] + " ");
         }
 
+
+        Integer aa = 1;
+        Integer bb = aa;
+        aa = 3;
+        System.out.println(bb);
     }
 }
