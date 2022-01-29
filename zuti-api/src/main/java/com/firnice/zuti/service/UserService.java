@@ -11,5 +11,7 @@ public interface UserService {
 
     UserPO findUserById(Long id);
 
+    UserPO findUserById2(Long id);
+
     UserPO update(UserPO user);
 }

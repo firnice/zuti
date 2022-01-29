@@ -29,7 +29,8 @@ public class IndexController {
     @GetMapping("/user/{id}")
     @ResponseBody
     public UserPO findUserById(@PathVariable("id") Long id) {
-        return userService.findUserById(id);
+//        return userService.findUserById(id);
+        return userService.findUserById2(id);
     }
 
 

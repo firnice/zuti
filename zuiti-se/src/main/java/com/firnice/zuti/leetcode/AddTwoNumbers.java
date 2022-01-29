@@ -1,5 +1,7 @@
 package com.firnice.zuti.leetcode;
 
+import com.firnice.zuti.ListNode;
+
 public class AddTwoNumbers {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 

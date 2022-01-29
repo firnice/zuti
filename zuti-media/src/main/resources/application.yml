@@ -1,0 +1,13 @@
+server:
+  port: 8094
+  servlet:
+    display-name: media-server-api
+    context-path: /ms/api
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
+  application:
+    name: media-server-api

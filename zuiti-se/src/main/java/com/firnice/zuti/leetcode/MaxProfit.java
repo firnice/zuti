@@ -39,35 +39,66 @@ public class MaxProfit {
 
 
         //头尾指针
-        int head = 1, tail = 0;
+        int head = 1, tail = 0, mid = 0;
         if (prices.length == 1) {
             return 0;
         }
 
         do {
+
             //还没买
             if (!isBuy) {
-                //差价大于fee就买
+                //涨了
                 if (prices[tail] < prices[head]) {
-                    //还是增
-                    while (head <= prices.length - 1 && prices[head] < prices[head + 1]) {
+                    //还是涨
+                    while (head < prices.length - 1 && prices[head] < prices[head + 1]) {
                         head = head + 1;
                     }
 
                     //涨幅大于手续费
-                    if(prices[tail] - prices[head]>fee){
-
-                    }else {
+                    //head要么没有下一步，要么下一步就是跌
+                    if (prices[tail] - prices[head] > fee) {
+                        isBuy = true;
+                        result += prices[tail] - prices[head] - fee;
+                        buyprice = prices[tail];
                         tail = head;
+                        head = head + 1;
                     }
 
+                } else {
+                    //还再跌,找最低点
+                    while (head < prices.length - 1 && prices[head] > prices[head + 1]) {
+                        tail = head;
+                        head = head + 1;
+                    }
                 }
+
+            }else {
+                //卖
+
+                //还是跌,找最低点
+                while (head < prices.length - 1 && prices[head] > prices[head + 1]) {
+                    head = head + 1;
+                }
+
+                //跌幅大于手续费
+                //head要么没有下一步，要么下一步就是跌
+                if (prices[tail] - prices[head] > fee) {
+                    isBuy = false;
+                    result += prices[tail] - prices[head] - fee;
+                    buyprice = prices[tail];
+                    tail = head;
+                    head = head + 1;
+                }
+
+
             }
+        } while (head <prices.length);
 
-        } while (head >)
 
-
-        for (int i = 0; i < prices.length; i++) {
+        for (
+                int i = 0;
+                i < prices.length; i++) {
             //有余粮
             if (!isBuy && i != prices.length - 1) {
                 //价格低
